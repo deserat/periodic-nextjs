@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import SiteParser from '../components/SiteParser'
-import content from '../content.json';
 
 let pages = []
 
@@ -11,7 +10,7 @@ export default function Page({ page }) {
     return (
       <>
         <Head>
-          <title>{page.title} | {content.title}</title>
+          <title>{page.title} | {page.title}</title>
         </Head>
         <h1>{page.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: page.content }}></div>
